@@ -3,7 +3,7 @@ const resolvers = {
         // returns an array of Tracks that will be used to populate
         // the homepage grid of our web client
         tracksForHome: (_, __, { dataSources } ) => {
-            return dataSources.trackAPI.getTracksforHome();
+            return dataSources.trackAPI.getTracksForHome();
         }
     },
     Track: {
@@ -13,4 +13,4 @@ const resolvers = {
     }
 };
 
-module.export = resolvers;
+module.exports = resolvers;

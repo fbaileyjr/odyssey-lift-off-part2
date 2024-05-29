@@ -3,6 +3,7 @@ const { startStandaloneServer } = require("@apollo/server/standalone");
 const typeDefs = require("./schema");
 const resolvers = require("./resolvers");
 const TrackAPI = require("./datasources/track-api");
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
  
 async function startApolloServer() {
   const server = new ApolloServer({ typeDefs, resolvers });
